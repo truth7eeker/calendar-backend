@@ -1,8 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const { createDates, getDates } = require('../controllers/calendarController');
 const router = express.Router();
-
 
 router.get('/', getDates);
 

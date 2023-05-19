@@ -1,7 +1,6 @@
 require('dotenv').config();
 
 const express = require('express');
-const serverless = require('serverless-http')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors')
@@ -13,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors())
-app.use('/.netlify/functions/server', require('./routes/routes'))    
+app.use('/', require('./routes/routes'))    
 
 
 mongoose.set('strictQuery', false);
@@ -29,7 +28,7 @@ app.listen(process.env.PORT, () => {
 })
 
 
-module.exports.handler = serverless(app)
+
 
 
 
