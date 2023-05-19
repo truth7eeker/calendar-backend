@@ -1,4 +1,4 @@
-const Date = require('../models/Date');
+const Date = require('../models/date');
 const { sendClientEmail, sendSelfEmail } = require('./emailController');
 
 const getDates = async (req, res) => {
